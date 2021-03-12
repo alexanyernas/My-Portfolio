@@ -1,0 +1,10 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 1.6em;
+    letter-spacing: 0.1em;
+}
+
+

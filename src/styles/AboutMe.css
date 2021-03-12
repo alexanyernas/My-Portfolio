@@ -1,0 +1,21 @@
+.img {
+    border-radius: 15px;
+    border: 5px solid #DDD;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.7;
+    font-weight: 600;
+}
+
+a {
+    color: #FFF;
+}
+
+a:hover {
+    color: #999;
+}
