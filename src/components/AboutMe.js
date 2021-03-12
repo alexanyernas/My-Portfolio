@@ -8,7 +8,7 @@ const AboutMe = () => {
             
                 <div className="col">
                     <div className="container">
-                        <img className="img" src="./assets/Me.jpg" alt="Alexanyer Naranjo" height="500" />
+                        <img className="img" src="./assets/me.jpg" alt="Alexanyer Naranjo" height="500" />
                     </div>
                 </div>
 
