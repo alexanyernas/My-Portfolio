@@ -15,7 +15,7 @@ const AboutMe = () => {
                 <div className="col mt-3">
                     <div className="container">
 
-                        <h2>Un poco sobre mi...</h2>
+                        <h2>Un poco sobre mí...</h2>
                         <hr style={{ backgroundColor:'#FFF' }}/>
                         
                         <p>
@@ -24,14 +24,12 @@ const AboutMe = () => {
                             enseñando Probabilidad y Estadística a los chicos más avanzados de la carrera.
                         </p>                    
                         <p>
-                            Me dedico al desarrollo frontend trabajando actualmente con la librería de React.js, destacando mi experiencia
-                            manejando otras tecnologías como C, C++, Java, JavaScript, Python, WordPress y Git. 
+                            Trabajo como Desarrollador Frontend utilizando la librería de React.js, destacando mi experiencia en el manejo de otras tecnologías tales como C/C++, Java, Python, Git y WordPress.
                         </p>
                         <p>
-                            Tengo una gran pasión por el aprendizaje y por ello, desde el 2019 junto con Alejandra Giannattasio, fundamos Educa2.
+                            Tengo una gran pasión por el aprendizaje y por ello, desde el 2019 junto con Alejandra Giannattasio, fundamos Educa2.       
                             Un proyecto destinado a enseñar a través de clases y cursos la importancia de la programación en la vida diaria de cada persona.
                         </p>
-                        
                         <hr style={{ backgroundColor:'#FFF' }}/>
                         <p>
                             <a href="https://github.com/alexanyernas/" target="_BLANK" rel="noreferrer"><i className="fab fa-github fa-2x mr-4"></i></a>
