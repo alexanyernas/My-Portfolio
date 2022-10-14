@@ -1,17 +1,18 @@
 import React from 'react';
+import { footer_links } from '../data/footer_links';
 
 const Footer = () => {
     return (
-        <footer className="container-fluid p-5">
+        <footer className="container p-5" id="contact">
             <div className="text-center text-light">
-                <h2>Just Smile ☕</h2>
+                <h3>alexanyernaranjo@gmail.com</h3>
                 <hr />
-                <br />
                 <p>
-                    <a href="https://github.com/alexanyernas/" target="_BLANK" rel="noreferrer"><i className="fab fa-github fa-2x mr-4"></i></a>
-                    <a href="https://linkedin.com/in/alexanyernas/" target="_BLANK" rel="noreferrer"><i className="fab fa-linkedin fa-2x mr-4"></i></a>
-                    <a href="https://twitter.com/alexanyernas/" target="_BLANK" rel="noreferrer"><i className="fab fa-twitter fa-2x mr-4"></i></a>
-                    <a href="https://instagram.com/alexanyernas" target="_BLANK" rel="noreferrer"><i className="fab fa-instagram fa-2x mr-4"></i></a>
+                    {
+                        footer_links.map(({url, icon}, index) => {
+                            return <a key={index} href={url} target="_BLANK" rel="noreferrer"><i className={icon}></i></a>
+                        })
+                    }
                 </p>
             </div>
         </footer>

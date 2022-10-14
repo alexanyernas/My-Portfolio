@@ -2,33 +2,43 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
 const NavBar = () => {
+
+    const links = [
+        {
+            to: '/#aboutme',
+            text: 'About Me'
+        },
+        {
+            to: '/#skills',
+            text: 'Skills'
+        },
+        {
+            to: '/#projects',
+            text: 'Projects'
+        },
+        {
+            to: '/#contact',
+            text: 'Contact'
+        }
+    ]
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <ul className="navbar-nav">
-                <li className="nav-item">
-                    <Link 
-                        to='/#aboutme'
-                        className='nav-link'
-                    >
-                        Sobre mi
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link 
-                        to='/#skills'
-                        className='nav-link'
-                    >
-                        Habilidades
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link
-                        to='/#projects'
-                        className='nav-link'
-                    >
-                        Proyectos
-                    </Link>
-                </li>
+                {
+                    links.map(({to, text}, index) => {
+                        return (
+                            <li className="nav-item" key={index} style={{fontSize: '18px'}}>
+                                <Link 
+                                    to={to}
+                                    className='nav-link'
+                                >
+                                    {text}
+                                </Link>
+                            </li>
+                        )
+                    })
+                }
             </ul>
         </nav>
     )

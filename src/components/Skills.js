@@ -1,65 +1,24 @@
 import React from 'react';
+import { skills } from '../data/skills';
 
 const Skills = () => {
     return (
-
         <div style={ { backgroundColor: '#FFF'} } id="skills">
             <div className="container p-5 text-center">
-                <h2>Mis habilidades</h2>
+                <h2>My Skills</h2>
                 <hr />
                 <br />
                 
                 <div className="row mb-4">
-                    <div className="col mb-3">
-                        <img src="./assets/skills/html.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Avanzado)</small></p>
-                    </div>
-                    
-                    <div className="col mb-3">
-                        <img src="./assets/skills/css.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Avanzado)</small></p>
-                    </div>
-                    
-                    <div className="col mb-3">
-                        <img src="./assets/skills/javascript.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Avanzado)</small></p>
-                    </div>
-                    
-                    <div className="col mb-3">
-                        <img src="./assets/skills/react.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Básico)</small></p>
-                    </div>
-
-                    <div className="col mb-3">
-                        <img src="./assets/skills/wordpress.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Intermedio)</small></p>
-                    </div>
-                </div>
-                <div className="row mb-4">
-                    <div className="col mb-3">
-                        <img src="./assets/skills/c.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Intermedio)</small></p>
-                    </div>
-                    
-                    <div className="col mb-3">
-                        <img src="./assets/skills/cpp.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Intermedio)</small></p>
-                    </div>
-                    
-                    <div className="col mb-3">
-                        <img src="./assets/skills/python.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Intermedio)</small></p>
-                    </div>
-                    
-                    <div className="col mb-3">
-                        <img src="./assets/skills/java.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Intermedio)</small></p>
-                    </div>
-                    
-                    <div className="col mb-3">
-                        <img src="./assets/skills/git.svg" alt="HTML" width="120" height="120" />
-                        <p className="mt-2 text-muted"><small>(Avanzado)</small></p>
-                    </div>
+                    {
+                        skills.map(({src, alt}, index) => {
+                            return (
+                                <div className="col-lg-3 col-sm-12 mb-4" key={index}>
+                                    <img src={src} alt={alt} width="120" height="120" />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

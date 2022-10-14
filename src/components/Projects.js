@@ -1,96 +1,29 @@
 import React from 'react';
+import { projects } from '../data/projects';
 
 const Projects = () => {
     return (
-        <div style={{ backgroundAttachment:'fixed', backgroundImage:`linear-gradient(rgb(0,0,0,0.9),rgb(0,0,0,0.9)), url('./assets/wallpaper-projects.jpg')` }} id="projects">
-            <div className="container text-center p-5">
-                <h2 className="text-light">Mis proyectos</h2>
-                <hr style={{backgroundColor:'#FFF'}} />
+        <div style={{ backgroundColor: '#000'}} id="projects">
+            <div className="container text-center py-5">
+                <h2 className="text-light">My Projects</h2>
                 <br />
-                <div className="row">
-                    
-                    <div className="col mb-5">
-                        <div className="card" style={{width:'18rem'}}>
-                            <img src="./assets/projects/Todo-App.png" alt="Calculator-App" />
-                            <div className="card-body">
-                                <h5 className="card-title">
-                                    To-Do App
-                                </h5>
-                                <p className="card-text">Desarollo de lista de tareas con React.js y Bootstrap.</p>
-                                <a href="https://alexanyernas.github.io/Todo-App/" target="_BLANK" rel="noreferrer" className="btn btn-outline-primary">Visitar sitio web</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col mb-5">
-                        <div className="card" style={{width:'18rem'}}>
-                            <img src="./assets/projects/Calculator-PayPal.png" alt="Todo-App" />
-                            <div className="card-body">
-                                <h5 className="card-title">
-                                    Calculator PayPal
-                                </h5>
-                                <p className="card-text">Calculadora de comisiones para transacciones PayPal.</p>
-                                <a href="https://alexanyernas.github.io/Calculator-PayPal/" target="_BLANK" rel="noreferrer" className="btn btn-outline-primary">Visitar sitio web</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div className="col mb-5">
-                        <div className="card" style={{width:'18rem'}}>
-                            <img src="./assets/projects/Calculator-App.png" alt="Calculator-App" />
-                            <div className="card-body">
-                                <h5 className="card-title">
-                                    Calculator App
-                                </h5>
-                                <p className="card-text">Calculadora sencilla para calculos matemáticos.</p>
-                                <a href="https://alexanyernas.github.io/Calculator-App/" target="_BLANK" rel="noreferrer" className="btn btn-outline-primary">Visitar sitio web</a>
-                            </div>
-                        </div>
-                    </div>
-                
-                </div>
-
-                <div className="row">
-                    
-                    <div className="col mb-5">
-                        <div className="card" style={{width:'18rem'}}>
-                            <img src="./assets/projects/Pokedex-App.png" alt="Calculator-App" />
-                            <div className="card-body">
-                                <h5 className="card-title">
-                                    Pokédex App
-                                </h5>
-                                <p className="card-text">Utilización de PokeApi para desarrollo de Pokédex.</p>
-                                <a href="https://alexanyernas.github.io/Pokedex-App/" target="_BLANK" rel="noreferrer" className="btn btn-outline-primary">Visitar sitio web</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col mb-5">
-                        <div className="card" style={{width:'18rem'}}>
-                            <img src="./assets/projects/Educa2.png" alt="Calculator-App" />
-                            <div className="card-body">
-                                <h5 className="card-title">
-                                    Educa2
-                                </h5>
-                                <p className="card-text">Sitio Web realizado con el CMS WordPress para Educa2.</p>
-                                <a href="https://educa2.net/" target="_BLANK" rel="noreferrer" className="btn btn-outline-primary">Visitar sitio web</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div className="col mb-5">
-                        <div className="card" style={{width:'18rem'}} >
-                            <img src="./assets/projects/Todo-Majoni-III.png" alt="Calculator-App" />
-                            <div className="card-body">
-                                <h5 className="card-title">
-                                    Todo Majoni III
-                                </h5>
-                                <p className="card-text">Sitio Web realizado con el CMS WordPress para Todo Majoni III.</p>
-                                <a href="https://todomajoni3.com/" target="_BLANK" rel="noreferrer" className="btn btn-outline-primary">Visitar sitio web</a>
-                            </div>
-                        </div>
-                    </div>
-                
+                <div className="row mb-4">
+                    {
+                        projects.reverse().map(({name, tech, image, url}, index) => {
+                            return (
+                                <div className="text-center col-lg-4 col-md-12 col-sm-12 mb-3" key={index}>
+                                    <div className="card" style={{width:'320px'}}>
+                                        <img src={image} alt={name} />
+                                        <div className="card-body">
+                                            <h5 className="card-title">{name}</h5>
+                                            <p style={{fontWeight: 300, fontSize: '14px'}}>{tech}</p>
+                                            <a href={url} target="_BLANK" rel="noreferrer" className="btn btn-outline-dark">See Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>
