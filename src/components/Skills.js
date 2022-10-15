@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from './containers/ScrollReveal';
 import { skills } from '../data/skills';
 
 const Skills = () => {
@@ -14,7 +15,9 @@ const Skills = () => {
                         skills.map(({src, alt}, index) => {
                             return (
                                 <div className="col-lg-3 col-sm-12 mb-4" key={index}>
-                                    <img src={src} alt={alt} width="120" height="120" />
+                                    <ScrollReveal>
+                                        <img src={src} alt={alt} width="120" height="120" />
+                                    </ScrollReveal>
                                 </div>
                             )
                         })

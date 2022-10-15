@@ -1,8 +1,9 @@
 import React from 'react';
-import { projects } from '../data/projects';
 import ModalProject from './ModalProject';
-
+import ScrollReveal from './containers/ScrollReveal';
+import { projects } from '../data/projects';
 const Projects = () => {
+
     return (
         <div style={{ backgroundColor: '#4B3B5D'}} id="projects">
             <div className="container text-center py-5">
@@ -10,17 +11,19 @@ const Projects = () => {
                 <br />
                 <div className="row mb-4">
                     {
-                        projects.reverse().map(({name, tech, image, carousel}, index) => {
+                        projects.map(({name, tech, image}, index) => {
                             return (
                                 <div className="text-center col-lg-4 col-md-12 col-sm-12 mb-3" key={index}>
-                                    <div className="card" style={{width:'320px'}}>
-                                        <img src={image} alt={name} />
-                                        <div className="card-body">
-                                            <h5 className="card-title">{name}</h5>
-                                            <p style={{fontWeight: 300, fontSize: '14px'}}>{tech}</p>
-                                            <ModalProject carousel={carousel} />
+                                    <ScrollReveal>
+                                        <div className="card" style={{width:'320px'}}>
+                                            <img src={image} alt={name} />
+                                            <div className="card-body">
+                                                <h5 className="card-title">{name}</h5>
+                                                <p style={{fontWeight: 300, fontSize: '14px'}}>{tech}</p>
+                                                <ModalProject index={index}/>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </ScrollReveal>
                                 </div>
                             )
                         })

@@ -1,0 +1,37 @@
+export const carousel = [
+    [
+        './assets/projects/Punicorp/Punicorp.jpg',
+        './assets/projects/Punicorp/Punicorp.jpg',
+        './assets/projects/Punicorp/Punicorp.jpg',
+    ],
+    [
+        './assets/projects/OxfordEnLinea.jpg',
+        './assets/projects/OxfordEnLinea.jpg',
+        './assets/projects/OxfordEnLinea.jpg',
+    ],
+    [
+        './assets/projects/SreOxfordEnLinea.jpg',
+        './assets/projects/SreOxfordEnLinea.jpg',
+        './assets/projects/SreOxfordEnLinea.jpg',
+    ],
+    [
+        './assets/projects/SreOxfordApp.jpg',
+        './assets/projects/SreOxfordApp.jpg',
+        './assets/projects/SreOxfordApp.jpg',
+    ],
+    [
+        './assets/projects/OxfordSistemaELearning.jpg',
+        './assets/projects/OxfordSistemaELearning.jpg',
+        './assets/projects/OxfordSistemaELearning.jpg',
+    ],
+    [
+        './assets/projects/SaonWeb.jpg',
+        './assets/projects/SaonWeb.jpg',
+        './assets/projects/SaonWeb.jpg',
+    ],
+    [
+        './assets/projects/Sermadre.jpg',
+        './assets/projects/Sermadre.jpg',
+        './assets/projects/Sermadre.jpg',
+    ],
+]
