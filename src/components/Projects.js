@@ -2,6 +2,8 @@ import React from 'react';
 import ModalProject from './ModalProject';
 import ScrollReveal from './containers/ScrollReveal';
 import { projects } from '../data/projects';
+import { getAssetsProject } from '../helpers/getAssetsProject';
+
 const Projects = () => {
 
     return (
@@ -16,7 +18,7 @@ const Projects = () => {
                                 <div className="text-center col-lg-4 col-md-12 col-sm-12 mb-3" key={index}>
                                     <ScrollReveal>
                                         <div className="card" style={{width:'320px'}}>
-                                            <img src={image} alt={name} />
+                                            <img src={getAssetsProject(image)} alt={name} />
                                             <div className="card-body">
                                                 <h5 className="card-title">{name}</h5>
                                                 <p style={{fontWeight: 300, fontSize: '14px'}}>{tech}</p>

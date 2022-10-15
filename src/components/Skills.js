@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollReveal from './containers/ScrollReveal';
 import { skills } from '../data/skills';
+import { getAssetsSkills } from '../helpers/getAssetsSkills';
 
 const Skills = () => {
     return (
@@ -16,7 +17,7 @@ const Skills = () => {
                             return (
                                 <div className="col-lg-3 col-sm-12 mb-4" key={index}>
                                     <ScrollReveal>
-                                        <img src={src} alt={alt} width="120" height="120" />
+                                        <img src={getAssetsSkills(src)} alt={alt} width="120" height="120" />
                                     </ScrollReveal>
                                 </div>
                             )
