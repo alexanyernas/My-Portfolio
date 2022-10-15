@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="container p-5" id="contact">
             <div className="text-center text-light">
-                <h3>alexanyernaranjo@gmail.com</h3>
+                <h3>alegiannattasioxd@gmail.com</h3>
                 <hr />
                 <p>
                     {

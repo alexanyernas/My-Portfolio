@@ -1,15 +1,16 @@
 import React from 'react';
 import { projects } from '../data/projects';
+import ModalProject from './ModalProject';
 
 const Projects = () => {
     return (
-        <div style={{ backgroundColor: '#000'}} id="projects">
+        <div style={{ backgroundColor: '#4B3B5D'}} id="projects">
             <div className="container text-center py-5">
                 <h2 className="text-light">My Projects</h2>
                 <br />
                 <div className="row mb-4">
                     {
-                        projects.reverse().map(({name, tech, image, url}, index) => {
+                        projects.reverse().map(({name, tech, image, carousel}, index) => {
                             return (
                                 <div className="text-center col-lg-4 col-md-12 col-sm-12 mb-3" key={index}>
                                     <div className="card" style={{width:'320px'}}>
@@ -17,7 +18,7 @@ const Projects = () => {
                                         <div className="card-body">
                                             <h5 className="card-title">{name}</h5>
                                             <p style={{fontWeight: 300, fontSize: '14px'}}>{tech}</p>
-                                            <a href={url} target="_BLANK" rel="noreferrer" className="btn btn-outline-dark">See Project</a>
+                                            <ModalProject carousel={carousel} />
                                         </div>
                                     </div>
                                 </div>
@@ -25,7 +26,7 @@ const Projects = () => {
                         })
                     }
                 </div>
-            </div>
+            </div>       
         </div>
     )
 }

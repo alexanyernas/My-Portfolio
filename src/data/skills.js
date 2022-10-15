@@ -1,5 +1,40 @@
 export const skills = [
     {
+        name: 'Adobe XD',
+        src: "./assets/skills/adobe-xd-1.svg",
+        alt: 'Adobe XD'
+    },
+    {
+        name: 'Figma',
+        src: "./assets/skills/figma-1.svg",
+        alt: 'Figma'
+    },
+    {
+        name: 'Sketch',
+        src: "./assets/skills/sketch-2.svg",
+        alt: 'Sketch'
+    },
+    {
+        name: 'Canva',
+        src: "./assets/skills/canva-1.svg",
+        alt: 'Canva'
+    },
+    {
+        name: 'Adobe Photoshop',
+        src: "./assets/skills/adobe-photoshop-2.svg",
+        alt: 'Adobe Photoshop'
+    },
+    {
+        name: 'Adobe Illustrator',
+        src: "./assets/skills/adobe-illustrator-cc-icon.svg",
+        alt: 'Adobe Illustrator'
+    },
+    {
+        name: 'Adobe Premiere Pro',
+        src: "./assets/skills/premiere-cc.svg",
+        alt: 'Adobe Premiere Pro'
+    },
+    {
         name: 'HTML',
         src: "./assets/skills/html-1.svg",
         alt: 'HTML'
@@ -15,29 +50,9 @@ export const skills = [
         alt: 'JavaScript'
     },
     {
-        name: 'TypeScript',
-        src: "./assets/skills/typescript.svg",
-        alt: 'TypeScript'
-    },
-    {
-        name: 'Sass',
-        src: "./assets/skills/sass-1.svg",
-        alt: 'Sass'
-    },
-    {
         name: 'Bootstraip',
         src: "./assets/skills/bootstrap-4.svg",
         alt: 'Bootstrap'
-    },
-    {
-        name: 'React',
-        src: "./assets/skills/react.svg",
-        alt: 'React'
-    },
-    {
-        name: 'Material UI',
-        src: "./assets/skills/material-ui-1.svg",
-        alt: 'Material UI'
     },
     {
         name: 'Vue',
@@ -53,21 +68,6 @@ export const skills = [
         name: 'Ionic',
         src: "./assets/skills/ionic.png",
         alt: 'Ionic'
-    },
-    {
-        name: 'Dart',
-        src: "./assets/skills/dart.svg",
-        alt: 'Dart'
-    },
-    {
-        name: 'Flutter',
-        src: "./assets/skills/flutter.svg",
-        alt: 'Flutter'
-    },
-    {
-        name: 'Python',
-        src: "./assets/skills/python.svg",
-        alt: 'Python'
     },
     {
         name: 'Git',

@@ -23,7 +23,7 @@ const NavBar = () => {
     ]
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark">
             <ul className="navbar-nav">
                 {
                     links.map(({to, text}, index) => {

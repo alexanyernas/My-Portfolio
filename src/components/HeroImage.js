@@ -3,10 +3,10 @@ import { icons } from '../data/icons';
 
 const HeroImage = () => {
     return (
-        <div className="hero-image" style={{ backgroundImage:`linear-gradient(rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.9)),url(./assets/heroImage.jpg)`}}>
+        <div className="hero-image" style={{ backgroundImage:`linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.8)),url(./assets/heroImage2.jpg)`}}>
             <div className="hero-text">
-                <h1 className="mb-4">Hi, I'm Alexanyer Naranjo!</h1>
-                <p>Frontend Developer</p>
+                <h1 className="mb-4">Hi, I'm Alejandra Giannattasio!</h1>
+                <p>Graphic Designer - UI/UX</p>
                 <hr style={{backgroundColor:'#FFF'}}/> 
                 <br />
                 <p>
