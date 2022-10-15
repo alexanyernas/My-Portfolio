@@ -13,16 +13,26 @@ const Projects = () => {
                 <br />
                 <div className="row mb-4">
                     {
-                        projects.map(({name, tech, image}, index) => {
+                        projects.map(({name, tech, image, url, big}, index) => {
                             return (
                                 <div className="text-center col-lg-4 col-md-12 col-sm-12 mb-3" key={index}>
                                     <ScrollReveal>
                                         <div className="card" style={{width:'320px'}}>
-                                            <img src={getAssetsProject(image)} alt={name} />
+                                            <img src={getAssetsProject(image)} alt={name} height={160} />
                                             <div className="card-body">
                                                 <h5 className="card-title">{name}</h5>
                                                 <p style={{fontWeight: 300, fontSize: '14px'}}>{tech}</p>
-                                                <ModalProject index={index}/>
+                                                <div className='row justify-content-center'>
+                                                    <div className='col-lg-6 col-sm-12 mb-2'>
+                                                        <ModalProject index={index} big={big} />
+                                                    </div>
+                                                    {
+                                                        url !== '#' &&
+                                                            <div className='col-lg-6 col-sm-12 mb-2'>
+                                                                <a href={url} target="_BLANK" rel="noreferrer" className="btn btn-outline-secondary">Visit Project</a>
+                                                            </div>
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
                                     </ScrollReveal>

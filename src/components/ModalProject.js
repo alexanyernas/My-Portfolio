@@ -1,8 +1,9 @@
 import React from "react";
 import { Carousel } from 'react-responsive-carousel';
 import { carousel } from "../data/carousel";
+import { getAssetsProject } from "../helpers/getAssetsProject";
 
-const ModalProject = ({index}) => {
+const ModalProject = ({index, big}) => {
 
     return (
         <>
@@ -10,21 +11,21 @@ const ModalProject = ({index}) => {
                 See Project
             </button>
 
-            <div className="modal fade bd-example-modal-lg" id={"exampleModalCenter" + index} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div className={ big ? "modal fade bd-example-modal-lg" : "modal fade"} id={"exampleModalCenter" + index} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div className={big ? "modal-dialog modal-dialog-centered modal-lg" : "modal-dialog modal-dialog-centered"} role="document">
                     <div className="modal-content">
-                        <div className="modal-header">
+                        <div className="modal-header" style={{backgroundColor: '#765996'}}>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div className="modal-body">
-                            <Carousel showArrows={false} showStatus={false} showIndicators={false}>
+                            <Carousel showStatus={false} showIndicators={false}>
                                 {
                                     carousel[index]?.map((item, i) => {
                                         return (
                                             <div key={i}>
-                                                <img src={item} alt={'Slide' + i} />
+                                                <img src={getAssetsProject(item)} alt={'Slide' + i} />
                                             </div>
                                         )
                                     })
